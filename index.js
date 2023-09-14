@@ -15,18 +15,18 @@ const { authentication } = require('./auth/auth');
 
 app.get("/", (req, res) => { return res.status(200).json({ message: 'Hello Bemeli' }) });
 
-// const { getData } = require('./handlers/getData');
+const { getData } = require('./handlers/getData');
 
-// app.get("/fetchData/:collection", getData);
+app.get("/fetchData/:collection", getData);
 
-// const { postData } = require('./handlers/postData');
-// app.post('/postData', postData);
+const { postData } = require('./handlers/postData');
+app.post('/postData', postData);
 
-// const { updateData } = require('./handlers/updateData');
-// app.patch('/updateData/:id', updateData);
+const { updateData } = require('./handlers/updateData');
+app.patch('/updateData/:id', updateData);
 
-// const { deleteData } = require('./handlers/deleteData');
-// app.delete('/deleteData/:id', deleteData);
+const { deleteData } = require('./handlers/deleteData');
+app.delete('/deleteData/:id', deleteData);
 
 const port = 5050;
 app.listen(port, () => { });
