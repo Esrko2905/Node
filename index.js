@@ -11,7 +11,7 @@ app.use((req, res, next) => {
 })
 const { authentication } = require('./auth/auth');
 
-app.use(authentication);
+//app.use(authentication);
 
 app.get("/", (req, res) => { return res.status(200).json({ message: 'Hello Bemeli' }) });
 
