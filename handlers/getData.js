@@ -9,11 +9,12 @@ exports.getData = async (req, res) => {
                 id: doc.id,
                 ...doc.data()
             }));
-            if (req.user['token'] == 12345) {
-                return res.status(200).json(data);
-            } else {
-                return res.status(500).json({ message: "not auth" });
-            }
+            return res.status(200).json(data);
+            // if (req.user['token'] == 12345) {
+            //     return res.status(200).json(data);
+            // } else {
+            //     return res.status(500).json({ message: "not auth" });
+            // }
 
         });
 
