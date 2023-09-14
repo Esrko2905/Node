@@ -9,7 +9,7 @@ app.use((req, res, next) => {
     res.setHeader('Content-Type', 'application/json');
     next();
 })
-const { authentication } = require('./auth/auth')
+const { authentication } = require('./auth/auth');
 
 app.use(authentication);
 
