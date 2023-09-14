@@ -28,5 +28,5 @@ app.patch('/updateData/:id', updateData);
 const { deleteData } = require('./handlers/deleteData');
 app.delete('/deleteData/:id', deleteData);
 
-const port = 5050;
+const port = 3000;
 app.listen(port, () => { });
